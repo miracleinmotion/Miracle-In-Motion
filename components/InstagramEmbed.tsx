@@ -10,15 +10,11 @@ declare global {
 }
 
 type InstagramEmbedProps = {
-  // Full post/reel URL, e.g. "https://www.instagram.com/reel/DbzGV0ATFzO/"
   url: string;
   caption?: string;
 };
 
 export default function InstagramEmbed({ url, caption }: InstagramEmbedProps) {
-  // Re-process embeds whenever this component mounts — needed because
-  // Instagram's script only scans the page once on load, so it won't
-  // pick up embeds added later (e.g. via Next.js client-side navigation).
   useEffect(() => {
     if (window.instgrm) {
       window.instgrm.Embeds.process();
@@ -44,9 +40,6 @@ export default function InstagramEmbed({ url, caption }: InstagramEmbedProps) {
           {caption}
         </p>
       )}
-
-      {/* next/script dedupes by src, so this only loads once even with
-          multiple InstagramEmbed components on the same page. */}
       <Script
         src="https://www.instagram.com/embed.js"
         strategy="lazyOnload"

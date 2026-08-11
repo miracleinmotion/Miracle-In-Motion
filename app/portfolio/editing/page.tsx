@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { editingShortForm, editingYouTube } from "@/lib/videos";
+import { editingReels, editingShortForm, editingYouTube } from "@/lib/videos";
 import VideoEmbed from "@/components/VideoEmbed";
 import InstagramEmbed from "@/components/InstagramEmbed";
 
@@ -8,7 +8,10 @@ export const metadata = {
 };
 
 export default function EditingPortfolioPage() {
-  const hasContent = editingShortForm.length > 0 || editingYouTube.length > 0;
+  const hasContent =
+    editingReels.length > 0 ||
+    editingShortForm.length > 0 ||
+    editingYouTube.length > 0;
 
   return (
     <div>
@@ -28,8 +31,9 @@ export default function EditingPortfolioPage() {
           <div className="text-center py-20">
             <p className="font-display text-2xl mb-4">Reel coming soon.</p>
             <p className="font-sans text-muted max-w-md mx-auto mb-8">
-              Editing samples are being finalized and will be added here shortly
-              — in the meantime, get in touch to see recent work directly.
+              Editing samples are being finalized and will be added here
+              shortly — in the meantime, get in touch to see recent work
+              directly.
             </p>
             <Link
               href="/#contact"
@@ -44,24 +48,34 @@ export default function EditingPortfolioPage() {
               Previous Projects
             </h2>
 
+            {editingReels.length > 0 && (
+              <div className="mb-24">
+                <p className="font-sans text-xs uppercase tracking-widest2 text-brass mb-10 text-center">
+                  Reels
+                </p>
+                <div className="flex flex-wrap justify-center gap-10">
+                  {editingReels.map((reel) => (
+                    <div key={reel.title} className="w-full max-w-sm">
+                      <InstagramEmbed url={reel.url} caption={reel.title} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {editingShortForm.length > 0 && (
               <div className="mb-24">
                 <p className="font-sans text-xs uppercase tracking-widest2 text-brass mb-10 text-center">
-                  Short Form Content
+                  Shorts
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-                  <div className="min-w-0 max-w-[280px] mx-auto overflow-hidden">
-                    <InstagramEmbed
-                      url="https://www.instagram.com/reel/DbzGV0ATFzO/"
-                      caption="Switchblade Serenade Reel"
-                    />
-                  </div>
                   {editingShortForm.map((video) => (
                     <VideoEmbed key={video.title} video={video} />
                   ))}
                 </div>
               </div>
             )}
+
             {editingYouTube.length > 0 && (
               <div>
                 <p className="font-sans text-xs uppercase tracking-widest2 text-brass mb-10 text-center">
