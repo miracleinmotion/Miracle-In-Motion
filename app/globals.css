@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f3ec;
+  color: #1c1b18;
+}
+
+::selection {
+  background-color: #a3813f;
+  color: #f6f3ec;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
