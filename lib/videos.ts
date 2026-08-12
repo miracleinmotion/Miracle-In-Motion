@@ -18,6 +18,7 @@ export const videoEntries: VideoEntry[] = [
 
 export const editingReels: ReelEntry[] = [
   { title: "Switchblade Serenade Reel", url: "https://www.instagram.com/reel/DbzGV0ATFzO/" },
+  { title: "BNL Recap Reel", url: "https://www.instagram.com/reel/DZYln5oIF_H/" },
 ];
 
 export const editingShortForm: VideoEntry[] = [
