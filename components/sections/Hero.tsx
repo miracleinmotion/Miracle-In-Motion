@@ -18,19 +18,36 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative h-[100vh] min-h-[600px] w-full overflow-hidden bg-ink"
+      className="relative h-[70vh] sm:h-[100vh] min-h-[500px] w-full overflow-hidden bg-ink"
     >
       {slides.map((src, i) => (
-        <Image
+        <div
           key={src}
-          src={src}
-          alt=""
-          fill
-          priority={i === 0}
-          className={`object-cover transition-opacity duration-[1500ms] ${
-            i === index ? "opacity-40" : "opacity-0"
+          className={`absolute inset-0 transition-opacity duration-[1500ms] ${
+            i === index ? "opacity-100" : "opacity-0"
           }`}
-        />
+        >
+          {/* Blurred backdrop — fills the frame on mobile where the photo
+              (16:9) can't fully cover a tall portrait screen without
+              cropping out most of its width. Hidden on larger screens
+              where object-cover alone looks fine. */}
+          <Image
+            src={src}
+            alt=""
+            fill
+            priority={i === 0}
+            className="object-cover scale-110 blur-2xl opacity-40 sm:hidden"
+          />
+          {/* Actual photo — shown in full on mobile (object-contain, no
+              crop), switches to a full-bleed crop on sm+ screens. */}
+          <Image
+            src={src}
+            alt=""
+            fill
+            priority={i === 0}
+            className="object-contain sm:object-cover opacity-90 sm:opacity-40"
+          />
+        </div>
       ))}
       <div className="absolute inset-0 bg-ink/50" />
 
@@ -41,16 +58,16 @@ export default function Hero() {
         <h1 className="font-display text-5xl sm:text-6xl text-paper leading-tight max-w-3xl">
           All-Purpose Media Service
         </h1>
-        <a
-          href="#portfolio"
+        
+<a href="#portfolio"
           className="mt-10 font-sans text-xs uppercase tracking-widest2 border border-paper text-paper px-6 py-4 hover:bg-paper hover:text-ink transition-colors"
         >
           Portfolio
         </a>
       </div>
 
-      <a
-        href="#about"
+      
+        <a href="#about"
         aria-label="Scroll down"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-paper/70 hover:text-paper transition-colors animate-bounce"
       >
@@ -58,6 +75,6 @@ export default function Hero() {
           <path d="M12 5v14M5 12l7 7 7-7" />
         </svg>
       </a>
-    </section>
+      </section>
   );
 }
