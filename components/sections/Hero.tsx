@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative h-[70vh] sm:h-[100vh] min-h-[500px] w-full overflow-hidden bg-ink"
+      className="relative h-[60vh] sm:h-[100vh] min-h-[440px] w-full overflow-hidden bg-ink"
     >
       {slides.map((src, i) => (
         <div
@@ -36,7 +36,7 @@ export default function Hero() {
             alt=""
             fill
             priority={i === 0}
-            className="object-cover scale-110 blur-2xl opacity-40 sm:hidden"
+            className="object-cover scale-110 blur-2xl opacity-60 sm:hidden"
           />
           {/* Actual photo — shown in full on mobile (object-contain, no
               crop), switches to a full-bleed crop on sm+ screens. */}
