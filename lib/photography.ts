@@ -6,9 +6,9 @@ export type PhotoCategory = {
 
 // Update `count` if you add/remove photos from public/images/photography/<slug>/
 export const photoCategories: PhotoCategory[] = [
-  { slug: "birthdays", label: "Birthdays", count: 30 },
+  { slug: "birthdays", label: "Birthdays", count: 34 },
   { slug: "concert", label: "Concert", count: 17 },
-  { slug: "portrait", label: "Portrait", count: 14 },
+  { slug: "portrait", label: "Portrait", count: 23 },
   { slug: "sports", label: "Sports", count: 8 },
 ];
 
