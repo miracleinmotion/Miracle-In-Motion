@@ -8,7 +8,7 @@ const skills = [
   "Colour Grading",
   "Sound Design",
   "Drone Operation",
-  "Premiere Pro",
+  "Multi-Cam Productions",
   "DaVinci Resolve",
 ];
 

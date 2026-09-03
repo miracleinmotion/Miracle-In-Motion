@@ -21,7 +21,7 @@ const sans = Work_Sans({
 
 export const metadata: Metadata = {
   title: "Miracle In Motion",
-  description: "All-purpose media service — videography, photography, and editing based in Brisbane.",
+  description: "All-purpose media service — videographer, photographer, and editor based in Brisbane.",
 };
 
 export default function RootLayout({
