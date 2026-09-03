@@ -22,7 +22,7 @@ export const editingReels: ReelEntry[] = [
 ];
 
 export const editingShortForm: VideoEntry[] = [
-  { title: "Formal Photography BTS", embedUrl: "https://www.youtube.com/shorts/760MApILeXE", vertical: true },
+  { title: "Formal Photography BTS", embedUrl: "https://www.youtube.com/embed/760MApILeXE", vertical: true },
   { title: "PC Building", embedUrl: "https://www.youtube.com/embed/9NdkzWOm6eY", vertical: true },
   { title: "Concert Photography BTS", embedUrl: "https://www.youtube.com/embed/5WeINDGN0gs", vertical: true },
   { title: "Gaming Reel 1", embedUrl: "https://www.youtube.com/embed/rqWVumU3jpc", vertical: true },
