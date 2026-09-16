@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const facts = ["Film Student", "Greater Brisbane Area", "Filipino"];
+const facts = ["Film Degree", "Greater Brisbane Area", "Filipino"];
 
 const skills = [
   "Cinematography",

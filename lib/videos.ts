@@ -17,8 +17,9 @@ export const videoEntries: VideoEntry[] = [
 ];
 
 export const editingReels: ReelEntry[] = [
-  { title: "Switchblade Serenade Reel", url: "https://www.instagram.com/reel/DbzGV0ATFzO/" },
-  { title: "BNL Recap Reel", url: "https://www.instagram.com/reel/DZYln5oIF_H/" },
+  { title: "GALAW! STREETZ Recap", url: "https://www.instagram.com/reel/DdL49gZS_g1/" },
+  { title: "Switchblade Serenade", url: "https://www.instagram.com/reel/DbzGV0ATFzO/" },
+  { title: "BNL Recap", url: "https://www.instagram.com/reel/DZYln5oIF_H/" },
 ];
 
 export const editingShortForm: VideoEntry[] = [
