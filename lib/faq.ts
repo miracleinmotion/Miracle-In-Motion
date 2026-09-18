@@ -69,7 +69,7 @@ export const faqCategories: FaqCategory[] = [
         id: "revisions",
         question: "How many video editing revisions is acceptable?",
         answer:
-          "I accept about 3 free minor full revisions. This includes small cuts, reorganising clips, changing colour grading or removing any unwanted effects. Bigger changes like music will incur an additional fee.",
+          "I accept about 3 free minor full revisions. This includes small cuts, reorganising clips, changing colour grading or removing any unwanted effects. Bigger changes like music or shift of scope will incur an additional fee.",
       },
       {
         id: "raw-media",
