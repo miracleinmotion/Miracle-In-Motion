@@ -8,7 +8,7 @@ export type PhotoCategory = {
 export const photoCategories: PhotoCategory[] = [
   { slug: "birthdays", label: "Birthdays", count: 34 },
   { slug: "concert", label: "Concert", count: 19 },
-  { slug: "portrait", label: "Portrait", count: 23 },
+  { slug: "portrait", label: "Portrait", count: 34 },
   { slug: "sports", label: "Sports", count: 8 },
 ];
 

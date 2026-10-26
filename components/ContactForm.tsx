@@ -131,7 +131,7 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p className="font-sans text-sm text-red-700">
-          Something went wrong sending that — please try again, or reach
+          Something went wrong sending that... please try again, or reach
           out directly via the details in the footer.
         </p>
       )}
